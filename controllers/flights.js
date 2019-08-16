@@ -2,7 +2,8 @@ const Flight = require('../models/flight');
 
 module.exports = {
     index,
-    new: newFlight
+    new: newFlight,
+    create
 };
 
 
@@ -13,6 +14,15 @@ function index(req, res) {
 }
 
 function newFlight(req, res) {
-    // We need to render the new.ejs view to the client
-    res.render('flights/new');
+    res.render('flights/new'); 
+}
+
+function create(req, res) {
+    for(let key in req.body){
+        req.body[key] === '' && delete req.body[key];
+    }
+    Flight.create(req.body, function(err, flight) {
+        console.log(flight);
+        res.redirect('/flights');
+    });
 }
