@@ -4,13 +4,16 @@ const flightCtlr = require('../controllers/flights');
 
 // => /flights
 
-// GET /flights/ => "See all the flights"
-// Routers map to a controller action
+// GET /flights/ => See all the flights
 
 router.get('/', flightCtlr.index); 
 
 // GET /flights/new => renders the flight form to the client so a flight can then be created
 
 router.get('/new', flightCtlr.new);
+
+// POST /flights => take form data (data payload) and then have mongoose/mongoDB create a document
+
+router.post('/', flightCtlr.create);
 
 module.exports = router;
