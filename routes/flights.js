@@ -16,4 +16,8 @@ router.get('/new', flightCtlr.new);
 
 router.post('/', flightCtlr.create);
 
+// GET /flights/:id => navigate to the show page of one particular flight and all of it's properties
+
+router.get('/:id', flightCtlr.show);
+
 module.exports = router;
