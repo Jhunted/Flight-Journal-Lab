@@ -2,7 +2,7 @@
 
 | Last Updated | Author |
 |:-------:|:--------:|
-| 08/15/19| Daniel Scott
+| 08/19/19| Daniel Scott
 
 
 A Superior Solution For Journaling/Tracking Flight information
@@ -22,5 +22,14 @@ A Superior Solution For Journaling/Tracking Flight information
 - [X] AAU, I want to view a list of all flights (index view) that displays each flight's airline, flight no., and departure date/time.
 
 - [X] AAU, I want to create flights by entering the information on a page (new view) that has a form and submitting it.
+
+
+- [ ] AAU, when viewing the list of flights, I want to click on a "detail" link displayed next to each flight to view all of the properties for that flight (show view)
+
+
+- [ ] AAU, when viewing the details page (show view) for a flight, I want to be able to add a destination for that flight, including its arrival date/time & one of the established airport codes
+
+
+- [ ] AAU, when viewing the details page (show view) for a flight, I want to see a list of that flight's destinations (airport & arrival)
 
 
