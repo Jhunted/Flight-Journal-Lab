@@ -20,4 +20,8 @@ router.post('/', flightCtlr.create);
 
 router.get('/:id', flightCtlr.show);
 
+// POST /flights/:id/destinations => add a destination record to an existing flight
+
+router.post('/:id/destinations', flightCtlr.addDestination);
+
 module.exports = router;
