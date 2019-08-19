@@ -39,11 +39,6 @@ function create(req, res) {
 }
 
 function addDestination(req, res) {
-    // 1) Query the database for a single flight by id
-    // 2) Create a destination
-    // 3) Push the destination to the destinations array property on the flight
-    // 4) Save the Flight record/doc
-    // 5) call res.redirect /flights/:id
     Flight.findById(req.params.id, function(err, flight) {
         flight.destinations.push(req.body);
         flight.save(function(err, flight) {
